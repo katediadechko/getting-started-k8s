@@ -12,4 +12,5 @@ RUN cd /src; npm install
 EXPOSE 8080
 
 # Run this command (starts the app) when the container starts
-CMD cd /src && node ./app.js
+WORKDIR /src
+CMD ["node", "./app.js"]
